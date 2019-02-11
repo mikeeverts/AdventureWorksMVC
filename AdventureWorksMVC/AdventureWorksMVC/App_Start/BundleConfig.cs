@@ -20,13 +20,20 @@ namespace AdventureWorksMVC
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+                      "~/Scripts/bootstrap.js",
+                      "~/Scripts/jquery.dataTables.min.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/jquery.dataTables.min.css"));
 
-            bundles.Add(new Bundle("~/bundles/datatables").Include("~/Scripts/DataTables/datatables.js", "~/Scripts/DataTables/datatables.css"));
+
+
+
+
+
+
         }
     }
 }
