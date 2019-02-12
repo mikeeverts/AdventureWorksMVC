@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using AdventureWorksMVC.Models;
 
 
+
 namespace AdventureWorksMVC.Controllers
 {
     public class EmployeesController : Controller
@@ -16,13 +17,16 @@ namespace AdventureWorksMVC.Controllers
         private AdventureWorks2012Entities db = new AdventureWorks2012Entities();
 
         // GET: Employees
+
         public ActionResult Index()
         {
-
-            return View();
-           
-            
+            ;
+            return View(db.Employees);
         }
+
+
+
+
 
         // GET: Employees/Details/5
         public ActionResult Details(int? id)

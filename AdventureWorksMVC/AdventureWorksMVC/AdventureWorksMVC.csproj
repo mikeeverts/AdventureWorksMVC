@@ -402,7 +402,67 @@
     <Compile Include="Models\UnitMeasure.cs">
       <DependentUpon>AdventureWorksModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\vAdditionalContactInfo.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vEmployee.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vEmployeeDepartment.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vEmployeeDepartmentHistory.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Vendor.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vIndividualCustomer.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vJobCandidate.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vJobCandidateEducation.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vJobCandidateEmployment.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vPersonDemographic.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vProductAndDescription.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vProductModelCatalogDescription.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vProductModelInstruction.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vSalesPerson.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vSalesPersonSalesByFiscalYear.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vStateProvinceCountryRegion.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vStoreWithAddress.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vStoreWithContact.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vStoreWithDemographic.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vVendorWithAddress.cs">
+      <DependentUpon>AdventureWorksModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vVendorWithContact.cs">
       <DependentUpon>AdventureWorksModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\WorkOrder.cs">
