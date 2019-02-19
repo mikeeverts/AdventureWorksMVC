@@ -10,45 +10,91 @@
 <br />
 
 <div>
-    <table id="table_id" class="display">
+    <table id="table_id" class="display nowrap" width="100%">
         <thead>
             <tr>
-                <th hidden>ID</th>
+                <th>ID</th>
                 <th>User ID</th>
                 <th>Job Title</th>
                 <th>First Name</th>
                 <th>Last Name</th>
+
+            </tr>
+            <tr>
+                <th>ID</th>
+                <th>User ID</th>
+                <th>Job Title</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+
             </tr>
         </thead>
+        <tfoot>
+            <tr>
+                <td>ID</td>
+                <td>User ID</td>
+                <td>Job Title</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+            </tr>
+        </tfoot>
 
 
 
         <tbody>
             @foreach (var e in Model)
             {
-                <tr>
-                    <td hidden>@e.BusinessEntityID</td>
-                    <td>@e.LoginID</td>
-                    <td>@e.JobTitle</td>
-                    <td>@e.Person.FirstName</td>
-                    <td>@e.Person.LastName</td>
-                </tr>
+            <tr>
+               <td>@e.BusinessEntityID</td>
+ 
+                <td>@e.LoginID</td>
+                <td>@e.JobTitle</td>
+                <td>@e.Person.FirstName</td>
+                <td>@e.Person.LastName</td>
+
+
+            </tr>
             }
 
         </tbody>
+ 
     </table>
 </div>
 <script>
-    $(document).ready(function () {
-        var table = $('#table_id').DataTable({
-            "order": [0, "asc"],
-            scrollY: 400,
-            aLengthMenu: [
-                [10, 50, 100, -1],
-                [10, 50, 100, "All"]
-            ]
-        });
-    });
 
+    //$(document).ready(function () {
+    //    var table = $('#table_id').DataTable({
+    //        "order": [0, "asc"],
+    //        scrollY: 400,
+    //        aLengthMenu: [
+    //            [10, 50, 100, -1],
+    //            [10, 50, 100, "All"]
+    //        ]
+    //    });
+    //});
+
+
+    $(document).ready(function () {
+        // Setup - add a text input to each footer cell
+        $('#table_id thead tr:eq(1) th').each(function () {
+            var title = $(this).text();
+            $(this).html('<input type="text" placeholder="Search ' + title + '" class="column_search" />');
+        });
+
+        // DataTable
+        var table = $('#table_id').DataTable({
+            orderCellsTop: top
+        });
+
+        // Apply the search
+        $('#table_id thead').on('keyup', ".column_search", function () {
+
+            table
+                .column($(this).parent().index())
+                .search(this.value)
+                .draw();
+        });
+
+    });
 
 </script>

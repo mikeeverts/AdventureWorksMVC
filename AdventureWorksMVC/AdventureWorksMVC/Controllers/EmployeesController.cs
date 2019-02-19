@@ -25,7 +25,11 @@ namespace AdventureWorksMVC.Controllers
         }
 
 
-
+        public JsonResult Index2()
+            {
+         
+                return Json(db.Employees, JsonRequestBehavior.AllowGet);
+            }
 
 
         // GET: Employees/Details/5
